@@ -1,0 +1,36 @@
+.center-text {
+   text-align : center;
+}
+
+.left-text {
+   text-align : left;
+}
+
+.justify-text {
+   text-align : justify;
+}
+
+.bold {
+   font-weight : bold;
+}
+
+.thin {
+   font-weight : thin;
+}
+
+.comment {
+   color: grey;
+   font-weight : bold;
+}
+
+.pre {
+   font-family: Consolas,monospace;
+}
+
+.block {
+   display : inline-block;
+}
+
+a.btn {
+   margin: .5rem 1rem; /* top+bottom left+right */
+}
