@@ -137,6 +137,13 @@ p {
    border-bottom-width: 4px;
 }
 
+a {
+color: black;
+/* border-bottom: 2px dotted #000;
+text-decoration: none; */
+text-decoration-style: wavy;
+}
+
 /* Accommodate 1920 x 1080 devices... Allow for screen stretch */
 @media screen and (max-width: 2000px) {
    body {

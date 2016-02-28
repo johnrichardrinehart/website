@@ -33,4 +33,31 @@
 
 a.btn {
    margin: .5rem 1rem; /* top+bottom left+right */
+} 
+
+.blink {
+  -webkit-animation: blink 2s step-end infinite;
+  -moz-animation: blink 2s step-end infinite;
+  -o-animation: blink 2s step-end infinite;
+  animation: blink 2s step-end infinite;
 }
+
+@-webkit-keyframes blink {
+  33% { opacity: 0 ;}
+  67% { opacity: 50 ;}
+}
+
+@-moz-keyframes blink {
+  33% { opacity: 0 ;}
+  67% { opacity: 50 ;}
+}
+
+@-o-keyframes blink {
+  33% { opacity: 0 ;}
+  67% { opacity: 50 ;}
+}
+
+@keyframes blink {
+  33% { opacity: 0 ;}
+  67% { opacity: 50 ;}
+} 
