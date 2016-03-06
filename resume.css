@@ -90,11 +90,11 @@ p {
 }
 
 .some-space-top {
-   padding-top: 2rem; /* top, right, bottom left */
+   padding-top: 2rem; /* top, right, bottom, left */
 }
 
 .some-space-right {
-   padding-right:1rem; /* top, right, bottom left */
+   padding-right:1rem; /* top, right, bottom, left */
 }
 
 .item {
@@ -103,11 +103,8 @@ p {
 }
 
 #resume {
-   margin: 0 auto;
+   margin: 1rem auto; /* top&bottom, left&right */
    position: relative;
-   top: 1rem;
-/*   left: 2rem;
-   right: 2rem; */
    width: 65%;
    border-style: solid;
    border-width: 3px;
