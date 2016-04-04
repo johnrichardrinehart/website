@@ -71,7 +71,7 @@ p {
 }
 
 .heading {
-   margin: 1rem .5rem; /* top,bottom left,right */
+   margin: 2rem .5rem; /* top,bottom left,right */
    font-size: 2em;
    font-weight: 300;
 }
@@ -105,11 +105,14 @@ p {
 #resume {
    margin: 1rem auto; /* top&bottom, left&right */
    position: relative;
-   width: 65%;
+   width: 75%;
+   top: 6rem;
+/*
    border-style: solid;
    border-width: 3px;
    border-color: #F0F0F0;
    border-radius: 20px;
+*/
 }
 
 .contact-info {
