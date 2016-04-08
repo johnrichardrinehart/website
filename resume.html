@@ -1,229 +1,267 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="resume.css" type="text/css" charset="utf-8">
-      <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700italic,700,900,900italic' rel='stylesheet' type='text/css'>
-      <title>John Rinehart's Resume</title>
-      <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
-   </head>
-   <body>
-      <div id="resume">
-         <div class="container">
-            <p id="name" class="child heading text-center">
-            John Rinehart<br>
-            </p>
-         </div>
-         <p id="name-border" class="child"</p>
-         <div class="container contact-info">
-            <div class="child text-center">
-               <span class="item">johnrichardrinehart@gmail.com</span> |
-               <span class="item">+1 (519) 888 - 4567 ext. 39039</span> |
-               <span class="item"><a href="https://www.github.com/fuzzybear3965">github.com/fuzzybear3965</a></span> |
-               <span class="item">IRC: fuzzybear3965</span>
-            </div> 
-         </div>
-         
-         <!-- Employment History -->
-         <div class="container">
-            <div class="child no-space text-center">
-               <p class="heading"> Employment History </p>
-            </div>
-         </div>
-         <!-- Job 1 -->
-         <div class="container">
-            <div class="child">
-               <p class="job-title"> Ph.D. Student - Digital Quantum Matter
-               Laboratory </p>
-            </div>
-            <div class="child to-right text-right">
-               <p class="job-timespan"> May 2013 - Present </p>
-            </div>
-         </div>
-         <!-- Job 1 Description -->
-         <div class="container ">
-            <p class="job-desc"> 
-	    The Digital Quantum Matter Laboratory (DQMLab) is a research group
-	    affiliated with the Institute for Quantum Computing and the University of
-	    Waterloo. This group is devoted to the implementation of a fully-fledged quantum
-	    computer through the use of superconducting quantum circuits.
-            </p>
-         </div>
-         <div class="container ">
-            <ul class="job-desc">
-               <li> Applied knowledge of microwave engineering </li>
-               <li> Entrusted with the product selection of sensitive and
-                  expensive laboratory equipment ($>10,000 of equipment). </li>
-               <li> Designed acoustic isolation chamber </li>
-            </ul>
-         </div>
-         
-         <!-- Job 2 -->
-         <div class="container">
-            <div class="child">
-               <p class="job-title"> Summer Researcher: UC Santa Barbara </p>
-            </div>
-            <div class="child to-right text-right">
-               <p class="job-timespan"> May, 2012 - August, 2012 </p>
-            </div>
-         </div>
-         <!-- Job 2 Description -->
-         <div class="container ">
-            <p class="job-desc"> 
-            Developed a novel microwave interface for a superconducting quantum
-            circuit. Worked alongside world-class members of the Martinis Group
-            (now affiliated with Google, Inc.).
-            </p>
-         </div>
-         <div class="container ">
-            <ul class="job-desc">
-               <li> Designed a printed circuit board requiring an unusual design
-               (aluminum conductor, high dielectric substrate). </li>
-               <li> Designed an aluminum enclosure providing a 50 &Omega;
-                  environment for the printed circuit board. </li>
-               <li> Performed time-domain reflectometry on the implemented dssign and
-                  verified the design was within the specified tolerances.  </li>
-            </ul>
-         </div>
-
-         <!-- Job 3 -->
-         <div class="container">
-            <div class="child">
-               <p class="job-title"> LHC2, Inc. </p>
-            </div>
-            <div class="child to-right text-right">
-               <p class="job-timespan"> May, 2012 - August, 2012 </p>
-            </div>
-         </div>
-         <!-- Job 3 Description -->
-         <div class="container ">
-            <p class="job-desc"> 
-               Participated in the development of a disruptive wireless radio
-               technology. This technology has been demonstrated to improve the
-               signal-to-noise ratios in receivers by as much as 40 dB (30 dB,
-               typically).
-            </p>
-         </div>
-         <div class="container ">
-            <ul class="job-desc">
-               <li> Designed algorithms to use in conjunction with the Ettus
-                  Universal Software Radio Peripheral cogntiive radio system. </li>
-               <li> Wrote software in C++ implementing a Fast-Fourier tranform
-                  algorithm. </li>
-               <li> Conducted field tests and analysis demonstrating the robustness of the
-                  LHC2 technology. </li>
-            </ul>
-         </div>
-         
-         <!-- Additional Experience -->
-         <div class="container">
-            <div class="child no-space text-center">
-               <p class="heading"> Other Experience </p>
-            </div>
-         </div>
-
-         <!-- Additional Experience 1 -->
-         <div class="container">
-            <div class="child">
-               <p class="job-title"> LaTeXCI </p>
-            </div>
-            <div class="child to-right text-right">
-               <p class="job-timespan"> March 2016 </p>
-            </div>
-         </div>
-         <!--  Additional Experience 1 details -->
-         <div class="container ">
-            <p class="job-desc">
-		Wrote a LaTeX continuous integration server using Python (Flask, jinja2, uWSGI) and sqlite3.
-            </p>
-         </div>
-         <div class="container ">
-            <ul class="job-desc">
-	    	<li> This application is designed to be easily deployable and will
-	    	allow anyone to host their own LaTeX continuous integration server. </li>
-               <li> Features server-side authentication and integrates  with Git server webhooks. </li>
-            </ul>
-         </div>
-         
-         <!-- Additional Experience 1 -->
-         <div class="container">
-            <div class="child">
-               <p class="job-title"> Go-Chat </p>
-            </div>
-            <div class="child to-right text-right">
-               <p class="job-timespan"> January, 2016 - Present </p>
-            </div>
-         </div>
-         <!--  Additional Experience 1 details -->
-         <div class="container ">
-            <p class="job-desc">
-               Wrote a chat server in Go and a chat client in vanilla javascript
-               and HTML. 
-            </p>
-         </div>
-         <div class="container ">
-            <ul class="job-desc">
-               <li> The application is designed to allow Go channels to manage the
-                  simultaneous connection of up to 10,000 simultaneous users. </li>
-               <li> The design will feature a server-side log, chat time-stamps and token-based
-                  authentication.</li>
-               <li> Easily deployable in a wide variety of operating systems and
-               will be built using industry-standard continuous integration tools (Jenkins). </li>
-            </ul>
-         </div>
-<!--
-         Additional Experience 2
-
-         <div class="container">
-            <div class="child">
-               <p class="job-title"> Pong.js </p>
-            </div>
-            <div class="child to-right text-right">
-               <p class="job-timespan"> October, 2015 - December, 2015 </p>
-            </div>
-         </div>
-
-         Additional Experience 2 details
-
-         <div class="container ">
-            <p class="job-desc">
-               Pong.js is a Javascript implementation of the classic Pong game.
-            </p>
-         </div>
-         <div class="container ">
-            <ul class="job-desc">
-               <li> Uses the Gamepad API to allow for the use of USB joysticks. </li>
-               <li> Features network-based session matching for users to find
-                  other players. </li>
-            </ul>
-         </div>
--->
-         <!-- Additional Experience 3 -->
-         <div class="container">
-            <div class="child">
-               <p class="job-title"> Additional Experience </p>
-            </div>
-         </div>
-         <!--  Additional Experience 3 details -->
-         <div class="container ">
-            <ul class="job-desc">
-               <li> Used a variety of Linux-based distributions (primarily
-                  Debian-based distributions) for 10 years. </li>
-               <li> Configured OpenVPN, FTP, SSH, HTTP (nginx and Apache)
-                  servers and CIFS (Samba) shares in a Linux environment. </li>
-               <li> Understand advanced networking principles (NAT, DNS, traffic
-               routing, etc.). </li>
-               <li> Versed in the following programming languages (in decreasing
-                  fluency): Javacript, MATLAB, Go, LaTeX, Java, C++, C, Python (2.7 and 3.0), 
-               </li>
-	       <li> Have taken massively open online courses in Android development,
-		heterogenous parallel programming, digital signal processing and machine
-		learning. </li>
-               <li> Have contributed to the development of a number of
-                  open-source projects</li>
-	       <li> Fluent in English and Spanish; conversational French (read: not fluent). </li>
-            </ul>
-         </div>
+<head>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="resume.css" type="text/css" charset="utf-8">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700italic,700,900,900italic' rel='stylesheet' type='text/css'>
+<title>John Rinehart's Resume</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+</head>
+<body>
+<div id="resume">
+   <div class="container">
+      <p id="name" class="child heading text-center">
+      John Rinehart<br>
+      </p>
+   </div>
+   <p id="name-border" class="child"</p>
+   <div class="container contact-info">
+      <div class="child text-center">
+         <span class="item">johnrichardrinehart@gmail.com</span> |
+         <span class="item">+1 (519) 888 - 4567 ext. 39039</span> |
+         <span class="item">
+            <a href="https://www.github.com/fuzzybear3965">github.com/fuzzybear3965</a>
+         </span> |
+         <span class="item">IRC: fuzzybear3965</span>
       </div>
-   </body>
+   </div>
+
+   <!-- Educational History -->
+   <div class="container">
+      <div class="child no-space text-center">
+         <p class="heading"> Academic History </p>
+      </div>
+   </div>
+
+   <!-- School 1 -->
+   <div class="container">
+      <div class="child">
+         <p class="job-title">
+            Ph.D. Physics (Quantum Information)
+         </p>
+      </div>
+      <div class="child text-center">
+         <p class="school-affiliation">DQMLab: University of Waterloo</p>
+      </div>
+      <div class="child to-right text-right">
+         <p class="job-timespan"> May, 2013 - Present </p>
+      </div>
+   </div>
+   <!-- School 1 Description -->
+   <div class="container ">
+      <p class="job-desc">
+         The Digital Quantum Matter Laboratory (DQMLab) is a research group
+         affiliated with the Institute for Quantum Computing and the University
+         of Waterloo. This group is devoted to the implementation of a
+         fully-fledged quantum computer through the use of superconducting
+         quantum circuits.
+      </p>
+   </div>
+   <div class="container ">
+      <ul class="job-desc">
+         <li> Applied knowledge of microwave engineering to design an infrared
+         filter. </li>
+         <li> Entrusted with the product selection of sensitive and expensive
+         laboratory equipment (more than $10,000 of equipment), including
+         uninterruptible power supplies and gigabit network switches. </li>
+         <li> Assisted with the design of MATLAB object-oriented, websocket-based
+         intstrument control system, Alfred. Alfred operates on a client-server
+         model, using JSON objects for the wire protocol. I was responsible for
+         the documentation of Alfred using Sphinx, in addition to performing
+         various bugfixes.
+      </ul>
+   </div>
+
+   <!-- School 2 -->
+   <div class="container">
+      <div class="child">
+         <p class="job-title">
+            B.S.: Electrical Engineering, Major: Physics
+         </p>
+      </div>
+      <div class="child text-center">
+         <p class="school-affiliation">Gonzaga University</p>
+      </div>
+      <div class="child to-right text-right">
+         <p class="job-timespan"> May, 2013 - Present </p>
+      </div>
+   </div>
+   <!-- School 2 Description -->
+   <div class="container ">
+      <p class="job-desc">
+         I completed a 4-year program in Electrical Engineering and a major in
+      Physics. Each summer I found different means of employment to maximimize my
+      exposure to different fields of work and research.
+      </p>
+   </div>
+   <div class="container ">
+      <ul class="job-desc">
+         <li> Mastered an advanced signal processing, controls systems, and
+         communications systems courses (FFT, DFT, wavelet transform, root locus
+         method, QPSK and QAM architectures. </li>
+         <li> Studied quantum mechanics, statistical physics and mathematical
+         methods for physics (Runge-Kutta, gradient descient, path integrals,
+         Fermi-Dirac distribution). </li>
+         <li> 4th-year senior design project involved assessing spectral
+         characteristics of spontaneous interferers in the context of Middleton
+         noise statistics. </li>
+      </ul>
+   </div>
+
+   <!-- Employment History -->
+   <div class="container">
+      <div class="child no-space text-center">
+         <p class="heading"> Employment History </p>
+      </div>
+   </div>
+
+   <!-- Job 1 -->
+   <div class="container">
+      <div class="child">
+         <p class="job-title"> Summer Researcher - UC Santa Barbara </p>
+      </div>
+      <div class="child to-right text-right">
+         <p class="job-timespan"> May, 2012 - August, 2012 </p>
+      </div>
+   </div>
+   <!-- Job 1 Description -->
+   <div class="container ">
+      <p class="job-desc">
+         Developed a novel microwave interface for a superconducting quantum
+         circuit. Worked alongside the world-class researchers of the Martinis Group
+         (now affiliated with Google, Inc.).
+      </p>
+   </div>
+   <div class="container ">
+      <ul class="job-desc">
+         <li> Designed a printed circuit board requiring an unusual design
+         (aluminum conductor, high dielectric substrate). </li>
+         <li> Designed an aluminum enclosure providing a 50 &Omega; environment
+         for the printed circuit board. </li>
+         <li> Performed time-domain reflectometry on the manufactured component and
+         verified the design satisfied the specified dimensional and electrical
+         tolerances. </li>
+      </ul>
+   </div>
+
+   <!-- Job 2 -->
+   <div class="container">
+      <div class="child">
+         <p class="job-title"> LHC2, Inc. </p>
+      </div>
+      <div class="child to-right text-right">
+         <p class="job-timespan"> May, 2012 - August, 2012 </p>
+      </div>
+   </div>
+   <!-- Job 2 Description -->
+   <div class="container ">
+      <p class="job-desc">
+         Participated in the development of a disruptive wireless radio
+         technology. This technology has been demonstrated to improve the
+         signal-to-noise ratios in receivers by as much as 40 dB.
+      </p>
+   </div>
+   <div class="container ">
+      <ul class="job-desc">
+         <li> Designed algorithms to use in conjunction with the Ettus Universal
+         Software Radio Peripheral cognitive radio system. </li>
+         <li> Wrote software in C++ implementing a real-time Fast-Fourier
+         Tranform (FFT) algorithm. </li>
+         <li> Conducted field tests and corporate product demonstrations validating the
+         robustness of the LHC2 technology. </li>
+      </ul>
+   </div>
+
+   <!-- Projects -->
+   <div class="container">
+      <div class="child no-space text-center">
+         <p class="heading"> Projects </p>
+      </div>
+   </div>
+
+   <!-- Project 1 -->
+   <div class="container">
+      <div class="child">
+         <p class="job-title"> LaTeXCI </p>
+      </div>
+      <div class="child to-right text-right">
+         <p class="job-timespan"> March, 2016 </p>
+      </div>
+   </div>
+   <!--  Project 1 details  -->
+   <div class="container ">
+      <p class="job-desc">
+         Wrote a LaTeX continuous integration server using Python (Flask,
+         jinja2, uWSGI), sqlite3, and nginx.
+      </p>
+   </div>
+   <div class="container ">
+      <ul class="job-desc">
+         <li> This application is designed to be easily deployable and will
+         allow anyone to host their own LaTeX continuous integration server.
+         </li>
+         <li> Features server-side authentication and integrates with Git server webhooks. </li>
+         <li> Will be shipped in a docker container allowing for application
+         scaling, easy deployment and isolated development.
+      </ul>
+   </div>
+
+   <!-- Project 2 -->
+   <div class="container">
+      <div class="child">
+         <p class="job-title"> Go-Chat </p>
+      </div>
+      <div class="child to-right text-right">
+         <p class="job-timespan"> January, 2016 - Present </p>
+      </div>
+   </div>
+   <!-- Project 2 details -->
+   <div class="container ">
+      <p class="job-desc">
+         Wrote a chat server in Go and a chat client in vanilla javascript and
+         HTML.
+      </p>
+   </div>
+   <div class="container ">
+      <ul class="job-desc">
+         <li> The application is designed to allow Go channels to manage the
+         simultaneous connection of up to 10,000 simultaneous users on standard
+         hardware. </li>
+         <li> The design will feature a server-side log, chat time-stamps, and
+         token-based authentication.</li>
+         <li> Easily deployable in a wide variety of operating systems and will
+         be built using industry-standard continuous integration tools
+         (Jenkins). </li>
+      </ul>
+   </div>
+
+   <!-- Additional Experience -->
+   <div class="container">
+      <div class="child no-space text-center">
+         <p class="heading"> Additional Experience </p>
+      </div>
+   </div>
+
+   <!--  Additional Experience -->
+   <div class="container ">
+      <ul class="job-desc">
+         <li> Used a variety of Linux-based distributions (primarily
+         Debian-based distributions) for 10 years. </li>
+         <li> Configured OpenVPN, FTP, SSH, HTTP (nginx and Apache)
+         servers and CIFS (Samba) shares in a Linux environment. </li>
+         <li> Understand advanced networking principles (NAT, DNS, traffic
+         routing, etc.). </li>
+         <li> Versed in the following programming languages (in decreasing
+         fluency): Javacript, MATLAB, Go, LaTeX, Java, C++, C, Python (2.7
+         and 3.0). </li>
+         <li> Have taken massively open online courses in Android development,
+         heterogenous parallel programming, digital signal processing and machine
+         learning. </li>
+         <li> Have contributed to the development of a number of
+         open-source projects (<i>lervag/vimtex</i>,
+         <i>syncthing/syncthing</i>, among others).</li>
+         <li> Fluent in English and Spanish; conversational-level French. </li>
+      </ul>
+   </div>
+</div>
+</body>
 </html>
