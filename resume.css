@@ -19,10 +19,6 @@ p {
    justify:content: flex-start;
 }
 
-.no-space {
-   margin: 0;
-}
-
 .divider {
    border-right:2px solid #808080;
    position: absolute;
@@ -36,12 +32,13 @@ p {
 }
 
 .job-info {
-   margin-bottom: 1.5rem;
+   margin-bottom: 1rem;
 }
 
 .job-title, .school-affiliation{
    margin: 0;
    margin-left: 2rem;
+/*   margin-bottom: 1rem; */
    font-weight: 500;
    font-style: normal;
    font-size: 11pt;
@@ -196,3 +193,8 @@ text-decoration-style: wavy;
       width: 80%;
    }
 }
+
+.no-space {
+   margin: 0;
+}
+
