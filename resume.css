@@ -3,13 +3,15 @@ p {
 }
 
 .container {
+   clear:both;
    font-family: 'Roboto', sans-serif;
-   display: flex;
+/*   display: flex;
    flex-flow: row nowrap;
+   */
+   width:100%;
 }
 
 .child {
-  flex: 1 100%;
   padding-bottom: .5rem;
 }
 
@@ -21,17 +23,6 @@ p {
    margin: 0;
 }
 
-.to-right {
-   padding:0rem .5rem;
-   margin-left: auto;
-}
-
-.to-left {
-   padding:0rem; 1rem;
-   margin-right: auto;
-   margin-left: 1rem;
-}
-
 .divider {
    border-right:2px solid #808080;
    position: absolute;
@@ -40,12 +31,12 @@ p {
    top:1.5rem;
 }
 
-.text-right {
-   text-align: right;
-}
-
 .clear-left-margin {
    margin-left: 0;
+}
+
+.job-info {
+   margin-bottom: 1.5rem;
 }
 
 .job-title, .school-affiliation{
@@ -54,6 +45,11 @@ p {
    font-weight: 500;
    font-style: normal;
    font-size: 11pt;
+}
+
+.school-affiliation{
+   font-style: italic;
+   font-weight: normal;
 }
 
 .job-timespan {
@@ -70,23 +66,34 @@ p {
    width:70%;
 }
 
-.school-affiliation{
-   font-style: italic;
-   font-weight: normal;
+ul.job-desc {
+   margin-bottom: 2rem;
 }
 
-ul.job-desc {
-   margin-bottom: 1rem;
+.to-right {
+   float:right;
+   width:200px;
+   text-align:right
+}
+
+.to-left {
+   float:left;
+   width:400px;
+   text-align:left;
+}
+
+.to-center {
+   position:absolute;
+   width:100%;
+/*   margin:0 auto; */
+   text-align:center;
+/*   display:inline-block; */
 }
 
 .heading {
-   margin: 2rem .5rem; /* top,bottom left,right */
+   margin: 1rem .5rem; /* top,bottom left,right */
    font-size: 2em;
    font-weight: 300;
-}
-
-.text-center {
-   text-align: center;
 }
 
 .important {
@@ -126,12 +133,19 @@ ul.job-desc {
 
 .contact-info {
    margin-bottom: .5rem;
+   height:2rem;
+}
+
+.yield-height {
+   height:auto;
+   position:relative;
 }
 
 #name {
    font-size: 4em;
    font-weight:100;
    margin-bottom: 0;
+
 }
 
 #name-border {
@@ -144,6 +158,7 @@ ul.job-desc {
    border-bottom-style: solid;
    border-color: #999;
    border-bottom-width: 4px;
+   height:4px;
 }
 
 a {
