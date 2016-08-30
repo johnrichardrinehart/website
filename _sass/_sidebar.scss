@@ -1,17 +1,28 @@
 ul {
-list-style-type: square;
+// list-style-type: square;
+list-style-type: none;
+}
+
+#sidebar-button {
+top: 0px;
+right: 0px;
+position: absolute;
+cursor: pointer;
+}
+
+#sidebar-content {
+display: none;
 }
 
 #sidebar {
 float: left;
-width: 45%;
+width: 24px;
 height: 100%;
-border-radius: 1em;
+border-radius: 0em;
 opacity: 1;
 transition: 500ms;
-position: fixed;
-// border-style:solid;
-// padding-left: 20%;
+position: relative;
+background-color: #999;
 }
 
 .title {
