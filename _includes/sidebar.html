@@ -1,0 +1,16 @@
+<div id="sidebar">
+<div id="sidebar-button">
+  <i class="material-icons">menu</i>
+</div>
+<div id="sidebar-content">
+<p class="title"> Posts </p>
+<ul>
+{% for post in site.posts %}
+<li>
+<a href="{{post.url}}"> {{post.date | date_to_string}} | {{ post.title }} </a>
+</li>
+{% endfor %}
+</ul> 
+</div>
+<script src="/js/sidebar.js"></script>
+</div>

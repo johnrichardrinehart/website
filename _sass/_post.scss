@@ -1,0 +1,41 @@
+html, body{
+margin: 0;
+padding: 0;
+// position: fixed;
+background-color:#ddd;
+border-radius: .5em;
+}
+
+a {
+color: inherit;
+}
+
+h1 {
+// padding-left: 25%;
+font-size: 2em;
+font-weight: 100;
+margin-top: 0;
+}
+
+#post-title {
+text-align: center;
+text-decoration-line: underline;
+text-decoration-color: lightblue;
+text-decoration-style: solid;
+}
+
+#post-container {
+margin-left: 30%;
+font-size: 18px;
+width: 40%;
+}
+
+#post-content {
+font-size: 18px;
+}
+
+.post-divider {
+// border-top: solid;
+// border-radius: 1em;
+}
+
