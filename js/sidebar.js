@@ -1,5 +1,5 @@
 var sidebar_btn = document.getElementById("sidebar-button");
-var SIDEBARWIDTH = "40%";
+var SIDEBARWIDTH = "20%";
 sidebar_btn.addEventListener("click", function() {
 		var sidebar = document.getElementById("sidebar");
 		var post_container = document.getElementById("post-container");
