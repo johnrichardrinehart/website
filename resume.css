@@ -116,7 +116,7 @@ ul.job-desc {
 }
 
 #resume {
-   margin: 1rem auto; /* top&bottom, left&right */
+   margin: 0rem auto 10rem auto; /* top&bottom, left&right */
    position: relative;
    width: 75%;
    top: 6rem;
