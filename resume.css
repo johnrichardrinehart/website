@@ -116,8 +116,7 @@ ul.job-desc {
 }
 
 #resume {
-   margin: 0rem auto 10rem auto; /* top&bottom, left&right */
-   position: relative;
+   margin: 8rem auto 8rem auto; /* top&bottom, left&right */
    width: 75%;
    top: 6rem;
    border-style: solid;
@@ -178,6 +177,7 @@ text-decoration-style: wavy;
 
    #resume {
       width: 80%;
+   margin: 8rem auto 8rem auto; /* top&bottom, left&right */
    }
 }
 
@@ -189,10 +189,10 @@ text-decoration-style: wavy;
 
    #resume {
       width: 80%;
+      margin: 0rem auto 10rem auto; /* top&bottom, left&right */
    }
 }
 
 .no-space {
    margin: 0;
 }
-
