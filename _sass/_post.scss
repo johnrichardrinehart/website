@@ -1,4 +1,4 @@
-$post-container-width: 40%;
+$post-container-width: 50rem;
 
 html, body{
    margin: 0;
@@ -6,10 +6,21 @@ html, body{
    // position: fixed;
    //background-color:#ddd;
    border-radius: .5em;
-   background: linear-gradient(to right, rgba(100,100,255,.1), white
-   .5*(100%-$post-container-width), rgba(200, 200, 200, 0) 50%),
-   linear-gradient(to left, rgba(100,100,255,.1), white
-   .5*(100%-$post-container-width), rgba(200, 200, 200, 0) 50%);
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6464ff+0,ffffff+20,ffffff+80,6464ff+100&0.15+0,1+20,1+80,0.15+100 */
+background: -moz-linear-gradient(left, rgba(100,100,255,0.15) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 80%, rgba(100,100,255,0.15) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(100,100,255,0.15) 0%,rgba(255,255,255,1) 20%,rgba(255,255,255,1) 80%,rgba(100,100,255,0.15) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgb(232,232,255)
+0%,white 20%,white 80%,rgb(232,232,255) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#266464ff', endColorstr='#266464ff',GradientType=1 ); /* IE6-9 */
+//   background: linear-gradient(to right, rgba(100,100,255,.1), white
+//   20rem, rgba(200, 200, 200, 0) 50rem),
+//   linear-gradient(to left, rgba(100,100,255,.1), white
+//   20rem, rgba(200, 200, 200, 0) 50rem);
+   height: 100%;
 }
 
 a {
@@ -21,6 +32,16 @@ a {
 h1 {
    font-size: 68px;
    font-weight: 100;
+   margin-bottom: 3rem;
+}
+
+#post-container {
+   margin: auto;
+   width: $post-container-width;
+//   padding: 2rem;
+   padding: 2rem 2rem 0rem 2rem;
+//   background-color: white;
+   height: 100%;
 }
 
 #post-title {
@@ -29,18 +50,12 @@ h1 {
    font-family: Roboto;
 }
 
-#post-container {
-   margin: auto;
-   width: $post-container-width;
-   padding: 2rem;
-   background-color: white;
-}
-
 #post-content {
    font-size: 18px;
    font-family: Roboto;
    font-size: 26px;
    line-height: 37px;
+   height: 100%;
 }
 
 .post-divider {
@@ -51,7 +66,7 @@ h1 {
 p {
    padding-bottom: 0rem;
 //   margin-bottom: 0rem;
-//   margin-bottom: 3rem;
+   margin-bottom: 3rem;
 }
 
 .emphasis-text {
@@ -60,7 +75,8 @@ p {
 
 th {
    padding-right: 1rem;
-   font-size: 16px;
+   font-size: 22px;
+   font-weight: 800;
 }
 
 td {
@@ -68,5 +84,22 @@ td {
 }
 
 table {
-   width: 100%
+   width: 100%;
+   margin-bottom: 2rem;
+}
+
+ul {
+   list-style-type: circle;
+   margin-bottom: 3rem;
+   list-style-position: inside;
+}
+
+ol {
+   list-style-type: decimal;
+   margin-bottom: 3rem;
+   list-style-position: inside;
+}
+
+hr {
+   margin-bottom: 4rem;
 }
