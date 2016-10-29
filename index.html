@@ -50,11 +50,9 @@
                <a href="about" class="btn waves-effect waves-dark bold brown-text text-lighten-1 hoverable">
                   about
                </a>
-	       {% for post in site.posts limit:1 %}
-               <a href="{{ post.url }}" class="btn waves-effect waves-dark bold brown-text text-lighten-1 hoverable" >
+               <a href="{{ site.posts.first.url }}" class="btn waves-effect waves-dark bold brown-text text-lighten-1 hoverable" >
                   blog
                </a>
-	       {% endfor %}
          </div>
       </div>
       <script type="text/javascript" src="js/cookie.js"></script>
