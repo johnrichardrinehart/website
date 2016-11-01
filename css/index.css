@@ -1,63 +1,151 @@
-.center-text {
-   text-align : center;
+body {
+   font-family: "Roboto", sans-serif;
 }
 
-.left-text {
-   text-align : left;
+a, a:after, a:before { text-decoration: none; font-weight: 400; box-shadow: none !important;}
+
+a:hover {
+   transition: box-shadow .25s;
+   box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.justify-text {
-   text-align : justify;
+br { line-height: 1.25rem; }
+
+p { color:#795548; }
+
+#center-card {
+   width: 90%;
+   margin-top: 1.75rem;
+   margin-bottom: .75rem;
 }
 
-.bold {
-   font-weight : bold;
+#header-text {
+   color: #e0e0e0;
+   font-weight: 100;
+   text-align: center;
+   font-size: 1.75em;
 }
 
-.thin {
-   font-weight : thin;
+.button {
+   color:#795548;
+   width: 15%;
+   margin: 0 auto;
+   text-align: center;
+   padding: .5rem;
+   border-radius: .15rem;
+   font-size: .70em;
 }
 
-.comment {
-   color: grey;
-   font-weight : bold;
+.button:focus{
+   animation: ripple .25s ease;
 }
+
+@keyframes ripple {
+    0% { opacity: 1; }
+    50% { opacity: .5; }
+    100% {opacity: 1; }
+}
+
+.button-left { margin-left: 10%; }
+
+.button-right { margin-right: 10%; }
+
+.buttons-container { display: flex; width: 100%; }
+
+.center { margin-left: auto; margin-right: auto; }
+
+.center-card-text { padding: 1rem; }
+
+.center-text { text-align : center; }
+
+.comment { color: grey; font-weight : 700; }
+
+.header { margin-top: 2rem;}
+
+.inline-block { display: inline-block; }
+
+.left-text { text-align : left; }
 
 .pre {
+   font-size: .6em;
    font-family: Consolas,monospace;
+   color:#795548;
+   line-height: 1.25rem;
 }
 
-.block {
-   display : inline-block;
+.text-block { margin-bottom: 1rem; }
+
+
+@media (min-width:361px) {
+   #header-text { font-size: 2.25em; }
+
+   .button { font-size: .75em; }
 }
 
-a.btn {
-   margin: .5rem 1rem; /* top+bottom left+right */
-} 
+@media (min-width: 501px) {
+   #header-text { font-size: 2.5em; }
 
-.blink {
-  -webkit-animation: blink 2s step-end infinite;
-  -moz-animation: blink 2s step-end infinite;
-  -o-animation: blink 2s step-end infinite;
-  animation: blink 2s step-end infinite;
+   #center-card { width: 70%; }
+
+   .button { width: 10%; }
+
+   .button-left { margin-left: 22.5%; }
+
+   .button-right { margin-right: 22.5%; }
 }
 
-@-webkit-keyframes blink {
-  33% { opacity: 0 ;}
-  67% { opacity: 50 ;}
+@media (min-width: 601px) {
+   #header-text { font-size : 3em; }
+
+   .button-left { margin-left: 20%; }
+
+   .button-right { margin-right: 20%; }
 }
 
-@-moz-keyframes blink {
-  33% { opacity: 0 ;}
-  67% { opacity: 50 ;}
+@media (min-width:801px) {
+   #center-card { width: 55%; }
+
+   #header-text { font-size: 3.5em; }
+
+   .button-left { margin-left: 27.5%; }
+
+   .button-right { margin-right: 27.5%; }
 }
 
-@-o-keyframes blink {
-  33% { opacity: 0 ;}
-  67% { opacity: 50 ;}
+@media (min-width:1051px) {
+   #center-card { width: 50%; margin-bottom: 1.25em; }
+
+   .button { width: 8%; font-size: .9em; }
+
+   .button-left { margin-left: 30%; }
+
+   .button-right { margin-right: 30%; }
+
+   .pre { font-size: 1em; line-height: 1.5rem;}
 }
 
-@keyframes blink {
-  33% { opacity: 0 ;}
-  67% { opacity: 50 ;}
-} 
+@media (min-width:1301px) {
+   #center-card { width: 40%; margin-bottom: 1.5em;}
+
+   #header-text { font-size: 3.75em; }
+
+   .button { font-size: 1em; width: 7%; }
+
+   .button-left { margin-left: 32.5%; }
+
+   .button-right { margin-right: 32.5%; }
+}
+
+@media (min-width: 1501px) {
+   br { line-height: 1.75rem; }
+
+   #header-text { font-size: 4.5em; }
+
+   .button { width: 5%; }
+
+   .button-left { margin-left: 33%; }
+
+   .button-right {margin-right: 33%; }
+
+   .pre { font-size: 1.1em; }
+}

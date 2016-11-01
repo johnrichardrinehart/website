@@ -5,61 +5,67 @@
 <html>
    <head>
       <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-      <link rel="stylesheet" href="css/index.css" type="text/css" media="screen" title="no title" charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="/css/reset.css">
+      <link rel="stylesheet" type="text/css" href="css/roboto.css">
+      <link rel="stylesheet" type="text/css" href="css/index.css" charset="utf-8">
       <title>John Rinehart's Personal Website</title>
-      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no,
+      maximum-scale=1.0, initial-scale=1.0" charset="UTF-8">
    </head>
-   <body class="brown darken-2">
-      <div class="container center">
-         <div class="row">
-            <div class="col s12 m12 l12">
-               <h1 id="headline" class="grey-text text-lighten-2">
-                  Life Optimized... kind of
-               </h1>
+   <body>
+      <div class="header">
+         <h1 id="header-text">
+            Life Optimized... kind of
+         </h1>
+      </div>
+      <div id="center-card" class="center-text center">
+         <div class="center-card-text">
+            <div class="text-block">
+               <p class="pre">
+               A rinehart object is an instance of the Rinehart class.
+               </p>
             </div>
-         </div>
-         <div class="row">
-            <div class="col s12 m6 l6 offset-m2 offset-m3 offset-l3">
-               <div id="center-card" class="card center-align">
-                  <div class="card-content brown-text text-lighten">
-                     <div class="pre">
-                        a rinehart object is an instance of the Rinehart class. <br>
-                        Some properties of the rinehart.richard.john object are given below. <br><br>
-                        <div class="center-text">
-                           <span class="left-text block">
-			      >> var john = rinehart.richard.john;<br>
-                              >> john.age = <span id="age"> </span>;
-                              <span class="comment">// years</span> <br>
-                              >> john.height = 73;
-                              <span class="comment">// inches</span> <br>
-                              >>  john.weight = 200;
-                              <span class="comment">// pounds</span> <br>
-			      >>  john.more = "See below"; <br>
-                           </span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+            <div class="text-block">
+               <p class="pre">
+               Some properties of the rinehart.richard.john object are given below.
+               </p>
             </div>
-         </div>
-         <div class="row">
-               <a href="resume" class="btn waves-effect waves-dark bold brown-text text-lighten-1 hoverable">
-                  resume
-               </a>
-               <a href="about" class="btn waves-effect waves-dark bold brown-text text-lighten-1 hoverable">
-                  about
-               </a>
-               <a href="{{ site.posts.first.url }}" class="btn waves-effect waves-dark bold brown-text text-lighten-1 hoverable" >
-                  blog
-               </a>
+      <div class="center-text">
+         <div class="left-text inline-block">
+            <p class="pre">
+            &gt;&gt; var john = rinehart.richard.john;<br>
+            &gt;&gt; john.age = <span id="age"> </span>;
+            <span class="comment">// years</span><br>
+            &gt;&gt; john.height = 73;<span class="comment"> //
+                                            inches</span><br>
+            &gt;&gt;  john.weight = 200;
+            <span class="comment">// pounds</span><br>
+            &gt;&gt;  john.more = "See below";
+            </p>
          </div>
       </div>
+      </div>
+      </div>
+      <div class="buttons-container">
+         <a href="resume" class="button button-left";
+            return false">
+            <div class="center-text">
+               RÉSUMÉ
+            </div>
+         </a>
+         <!--<a href="about" class="button">-->
+            <!--<div>-->
+               <!--<p> ABOUT </p>-->
+            <!--</div>-->
+         <!--</a>-->
+         <a href="{{ site.posts.first.url }}" class="button button-right">
+            <div>
+               BLOG
+            </div>
+         </a>
+      </div>
       <script type="text/javascript" src="js/cookie.js"></script>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <!-- Compiled and minified JavaScript -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
       <script type="text/javascript" src="js/age-calculator.js"></script>
-      <script type="text/javascript" src="js/home-layout.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
    </body>
 </html>

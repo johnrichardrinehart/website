@@ -1,0 +1,42 @@
+/*from localfont.com*/
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot');
+  src: url('https://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot?#iefix') format('embedded-opentype'),
+       local('Roboto'),
+       local('Roboto-regular'),
+       url('https://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/roboto/v15/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff') format('woff'),
+       url('https://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf') format('truetype'),
+       url('https://fonts.gstatic.com/l/font?kit=_YZOZaQ9UBZzaxiLBLcgZg&skey=a0a0114a1dcab3ac&v=v15#Roboto') format('svg');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOPY6323mHUZFJMgTvxaG2iE.eot');
+  src: url('https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOPY6323mHUZFJMgTvxaG2iE.eot?#iefix') format('embedded-opentype'),
+       local('Roboto Bold'),
+       local('Roboto-700'),
+       url('https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOJBw1xU1rKptJj_0jans920.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOLO3LdcAZYWl9Si6vvxL-qU.woff') format('woff'),
+       url('https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOKCWcynf_cDxXwCLxiixG1c.ttf') format('truetype'),
+       url('https://fonts.gstatic.com/l/font?kit=d-6IYplOFocCacKzxwXSOJbd9NUM7myrQQz30yPaGQ4&skey=c06e7213f788649e&v=v15#Roboto') format('svg');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 100;
+  font-style: normal;
+  src: url('https://fonts.gstatic.com/s/roboto/v15/PP2U5prMl9yvKSWVu6DtvPesZW2xOQ-xsNqO47m55DA.eot');
+  src: url('https://fonts.gstatic.com/s/roboto/v15/PP2U5prMl9yvKSWVu6DtvPesZW2xOQ-xsNqO47m55DA.eot?#iefix') format('embedded-opentype'),
+       local('Roboto Thin'),
+       local('Roboto-100'),
+       url('https://fonts.gstatic.com/s/roboto/v15/2tsd397wLxj96qwHyNIkxHYhjbSpvc47ee6xR_80Hnw.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/roboto/v15/vzIUHo9z-oJ4WgkpPOtg13YhjbSpvc47ee6xR_80Hnw.woff') format('woff'),
+       url('https://fonts.gstatic.com/s/roboto/v15/Jzo62I39jc0gQRrbndN6nfesZW2xOQ-xsNqO47m55DA.ttf') format('truetype'),
+       url('https://fonts.gstatic.com/l/font?kit=hfaguKg3-IA6kBbQw6DBafesZW2xOQ-xsNqO47m55DA&skey=5473b731ec7fc9c1&v=v15#Roboto') format('svg');
+}
