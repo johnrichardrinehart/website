@@ -45,6 +45,11 @@ button:focus{
    outline: 0;
 }
 
+button:focus {
+   box-shadow: none;
+}
+
+
 @keyframes ripple {
     0%, 100% { opacity: 1; }
     50% { opacity: .5; }
