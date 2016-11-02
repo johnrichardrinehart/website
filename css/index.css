@@ -1,17 +1,8 @@
-body {
-   font-family: "Roboto", sans-serif;
-}
-
-a:hover {
-   transition: box-shadow .5s;
-   box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
 a {
    font-weight: 400;
    color: #795548;
    border-radius: .15rem;
-   font-size: .60em;
+   font-size: .6em;
    border: none;
    padding: 1em;
    width: 12vw;
@@ -19,10 +10,34 @@ a {
    opacity: 1;
    text-align: center;
    text-decoration: none;
+   box-shadow: none;
+   transition: box-shadow .5s ease-out;
+}
+
+a:active{
+   animation: ripple .3s ease-out;
+}
+
+a:hover {
+   transition: box-shadow .5s ease;
+   box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+a:visited, a:focus {
+   box-shadow: none; outline: none;
 }
 
 a::-moz-focus-inner {
    border: 0;
+}
+
+@keyframes ripple {
+    0% { opacity: 1; }
+    100% { opacity: .4; }
+}
+
+body {
+   font-family: "Roboto", sans-serif;
 }
 
 br { line-height: 1.25rem; }
@@ -40,21 +55,6 @@ p { color:#795548; }
    font-weight: 100;
    text-align: center;
    font-size: 1.75em;
-}
-
-a:focus{
-   animation: ripple .25s ease;
-   outline: 0;
-}
-
-a:focus {
-   box-shadow: none;
-}
-
-
-@keyframes ripple {
-    0%, 100% { opacity: 1; }
-    50% { opacity: .5; }
 }
 
 .buttons-container {
