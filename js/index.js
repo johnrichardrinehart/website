@@ -37,7 +37,7 @@ function homeLayoutModule() {
 		var center_card_element = document.getElementById("center-card");
       center_card_element.style.background = this.squares_background_pallete[num_visits_mod_pallete_size];
 		// change buttons color
-		var button_elements = document.getElementsByClassName("button");
+		var button_elements = document.getElementsByTagName("button");
 		for ( var i = 0; i < button_elements.length; i++) {
 				button_elements[i].style.background = this.squares_background_pallete[num_visits_mod_pallete_size];
 		};
