@@ -2,24 +2,26 @@ body {
    font-family: "Roboto", sans-serif;
 }
 
-button:hover {
+a:hover {
    transition: box-shadow .5s;
    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-button {
+a {
    font-weight: 400;
    color: #795548;
    border-radius: .15rem;
    font-size: .60em;
    border: none;
    padding: 1em;
-   width: 20vw;
+   width: 12vw;
    cursor: pointer;
    opacity: 1;
+   text-align: center;
+   text-decoration: none;
 }
 
-button::-moz-focus-inner {
+a::-moz-focus-inner {
    border: 0;
 }
 
@@ -40,12 +42,12 @@ p { color:#795548; }
    font-size: 1.75em;
 }
 
-button:focus{
+a:focus{
    animation: ripple .25s ease;
    outline: 0;
 }
 
-button:focus {
+a:focus {
    box-shadow: none;
 }
 
@@ -93,7 +95,7 @@ button:focus {
       font-size: .7em;
    }
 
-   button { font-size: .75em; }
+   a { font-size: .75em; }
 }
 
 @media (min-width: 501px) {
@@ -101,8 +103,8 @@ button:focus {
 
    #center-card { width: 70%; }
 
-   button {
-      width: 15vw;
+   a {
+      width: 11vw;
    }
 
    .buttons-container {
@@ -115,8 +117,12 @@ button:focus {
 
    #center-card {width: 60%; }
 
+   .button {
+      width: 8vw;
+   }
+
    .buttons-container {
-      margin: 0 22.5vw;
+      margin: 0 25vw;
    }
 
 }
@@ -126,12 +132,12 @@ button:focus {
 
    #header-text { font-size: 3.5em; }
 
-   button {
+   a {
       width: 10vw;
    }
 
    .buttons-container {
-      margin: 0 25vw;
+      margin: 0 27.5vw;
    }
 
 }
@@ -139,7 +145,11 @@ button:focus {
 @media (min-width:1051px) {
    #center-card { width: 50%; margin-bottom: 1.25em; }
 
-   button { width: 9vw; font-size: .9em; }
+   a { width: 9vw; font-size: .9em; }
+
+   .button {
+      width: 7vw;
+   }
 
    .buttons-container {
       margin: 0 30vw;
@@ -153,7 +163,11 @@ button:focus {
 
    #header-text { font-size: 3.75em; }
 
-   button { font-size: 1em; width: 8vw; }
+   a { font-size: 1em; width: 8vw; }
+
+   .button {
+      width: 5vw;
+  }
 
    .buttons-container {
       margin: 0 32.5vw;
@@ -165,7 +179,7 @@ button:focus {
 
    #header-text { font-size: 4.5em; }
 
-   .button { width: 8vw; }
+   .button { width: 4vw; }
 
    .buttons-container {
       margin: 0 33vw;
