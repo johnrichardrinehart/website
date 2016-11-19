@@ -1,5 +1,6 @@
 var sidebar_btn = document.getElementById("sidebar-button");
-var SIDEBARWIDTH = "20%";
+var SIDEBARWIDTH = "100%";
+var SIDEBARHEIGHT = "auto";
 sidebar_btn.addEventListener("click", function() {
 		var sidebar = document.getElementById("sidebar");
 		var post_container = document.getElementById("post-container");
@@ -9,10 +10,13 @@ sidebar_btn.addEventListener("click", function() {
 		if (sidebar_content.style.display === "" && sidebar_status === "menu") {
 			icon.textContent = "close";
 			sidebar.style.width = SIDEBARWIDTH;
-			sidebar_content.style.display = "block" ; // show the sidebar content 
+			sidebar.style.height = SIDEBARHEIGHT;
+//         sidebar.style.padding = "0 2rem";
+			sidebar_content.style.display = "block" ; // show the sidebar content
 		} else if (sidebar_content.style.display === "block" && sidebar_status === "close") {
 			icon.textContent = "menu";
 			sidebar.style.width = sidebar_btn.offsetWidth;
 			sidebar_content.style.display = "" ; // hide the sidebar content
+//         sidebar.style.padding = "0";
 		};
 });
