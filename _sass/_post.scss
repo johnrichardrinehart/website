@@ -5,7 +5,9 @@ html, body{
    //background-color:#ddd;
    border-radius: .5em;
    -webkit-font-smoothing: antialiased;
+   font-family: Roboto, Arial;
 }
+
 
 html {
    width: 100%;
@@ -38,12 +40,10 @@ a {
 #post-title {
    text-align: center;
    text-decoration-style: solid;
-   font-family: Roboto;
    margin-bottom: 2em;
 }
 
 #post-content {
-   font-family: Roboto;
    line-height: 2em;
    height: 100%;
 }
