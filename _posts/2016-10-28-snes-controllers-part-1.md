@@ -19,7 +19,7 @@ really not that much time, but it definitely left a mark on me.
 To resurrect the spirit of my childhood and provide some entertainment for me
 and my friends I purchased 4 SNES USB controllers on eBay. They were only ~$5
 each with free shipping (allow 4-6 weeks for delivery). When these are paired up
-with an SNES emulator (snes9x, currently) the 8-bit magic really comes to life.
+with an SNES emulator (Snes9x, currently) the 8-bit magic really comes to life.
 The graphics, though, on a 60-inch flatscreen leave much to be desired. Rainbow
 Road is seizure-inducing and Bowser's Castle is disorienting.  Thankfully, the
 emulator comes with some low-pass filters that smooth out the graphics to dull
@@ -29,26 +29,26 @@ Okay, but here's the rub: When the controllers are inserted the operating system
 (Ubuntu 16.04, currently) assigns device files to each "joystick" (js). For
 example, the first SNES controller inserted may be assigned /dev/input/js0, the
 second controller may be assigned /dev/input/js1, etc. Now, I have to tell
-snes9x, the emulator, which controller is associated with which "player" in the
+Snes9x, the emulator, which controller is associated with which "player" in the
 game. You do this before starting to play any game. So, one *could* insert the
-four controllers on some day, configure snes9x to associate /dev/input/js0 →
+four controllers on some day, configure Snes9x to associate /dev/input/js0 →
 joystick 4, /dev/input/js2 → joystick 1, /dev/input/js1 → joystick 2, and
 /dev/input/js3 → joystick 3, for example. If that person decided to never
 unplug the controllers then this should work forever. However, if tomorrow the
 person unplugs and re-plugs in the controllers in a different order then that
-person will have to reconfigure the joystick mapping in snes9x. That's a real
+person will have to reconfigure the joystick mapping in Snes9x. That's a real
 pain.
 
 Now, if we could distinguish between the controllers at the time of insertion,
 then we maybe could use some joystick library or the operating system itself to
-configure the joysticks without having to use the interface of snes9x. However,
+configure the joysticks without having to use the interface of Snes9x. However,
 all of the joysticks were made in China in the same factor. They have the same
 Vendor ID numbers and Product ID numbers (usually, the only numbers that
 distinguish USB devices). So, that isn't going to work.
 
-However, I have noticed that snes9x (technically snes9x-gtk) configures an XML
+However, I have noticed that Snes9x (technically Snes9x-gtk) configures an XML
 file in ~/.snes9x (~/.snes9x/snes9x.xml) with the information about the
-joysticks after a user clicks "apply" on the snes9x user interface after
+joysticks after a user clicks "apply" on the Snes9x user interface after
 configuring the controller(s). The XML file stores information about which key
 to associate with "Up" on "Joystick 1" and "B" on "Joystick 2", etc. The
 information about these keypresses (stored as some number hashed from the
@@ -65,7 +65,7 @@ webcams, etc.) have been attached to the computer. You can configure udev to
 trigger scripts to run when certain devices are plugged in. This is what I'm
 going to use udev for. I will detect when a controller has been plugged in and
 then I'll write to the XML file that stores the information about the joystick
-mapping. Then, no one has to worry about configuring snes9x with information
+mapping. Then, no one has to worry about configuring Snes9x with information
 about the joysticks. It's done on their behalf.
 
 It's getting late and I wanted to meet up some friends at a party (9 John). So,
