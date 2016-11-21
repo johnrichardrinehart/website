@@ -1,13 +1,16 @@
 #sidebar {
    float: left;
-   width: 24px;
    //   height: 100%;
    border-radius: 0em;
    opacity: 1;
    transition: 500ms;
    position: fixed;
    color: black;
-   background-color: rgba(255,255,255,1);
+   background-color: transparent;
+   overflow-y: auto;
+   width: 24px;
+   height: 24px;
+   max-height: 50%;
 }
 
 #sidebar-button {
