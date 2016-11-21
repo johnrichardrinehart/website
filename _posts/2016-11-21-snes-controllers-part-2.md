@@ -1,5 +1,6 @@
 ---
 layout: post
+has_math: false
 ---
 
 <span class="emphasis-text"> Welcome, back, reader. </span> So far, I'm
