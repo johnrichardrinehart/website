@@ -1,18 +1,23 @@
-p {
-   margin: .5rem 0rem; /* top,bottom left,right */
-}
+@media print {
+   @page {
+      margin: .25cm;
+   }
 
-.container {
-   clear:both;
-   font-family: 'Roboto', sans-serif;
-/*   display: flex;
-   flex-flow: row nowrap;
-   */
+   p {
+      margin: .5rem 0rem; /* top,bottom left,right */
+   }
+
+   .container {
+      clear:both;
+      font-family: 'Roboto', sans-serif;
+      /*   display: flex;
+      flex-flow: row nowrap;
+       */
    width:100%;
 }
 
 .child {
-  padding-bottom: .5rem;
+   padding-bottom: 0rem;
 }
 
 .space-between {
@@ -38,10 +43,10 @@ p {
 .job-title, .school-affiliation{
    margin: 0;
    margin-left: 2rem;
-/*   margin-bottom: 1rem; */
+   /*   margin-bottom: 1rem; */
    font-weight: 500;
    font-style: normal;
-   font-size: 11pt;
+   font-size: .75rem;
 }
 
 .school-affiliation{
@@ -52,19 +57,19 @@ p {
 .job-timespan {
    margin: 0;
    margin-right: 2rem;
-   font-size: 11pt;
+   font-size: .75rem;
 }
 
 .job-desc{
    margin: 0;
    margin-left: 2rem;
    margin-bottom: .5rem;
-   font-size:1em;
-   width:70%;
+   font-size:.75rem;
+   width:85%;
 }
 
 ul.job-desc {
-   margin-bottom: 2rem;
+   margin-bottom: .5rem;
 }
 
 .to-right {
@@ -80,17 +85,18 @@ ul.job-desc {
 }
 
 .to-center {
-   position:absolute;
+   position: relative;
    width:100%;
-/*   margin:0 auto; */
+      margin:0 0;
    text-align:center;
-/*   display:inline-block; */
+   /*   display:inline-block; */
 }
 
 .heading {
-   margin: 1rem .5rem; /* top,bottom left,right */
-   font-size: 2em;
-   font-weight: 300;
+   margin: 0rem .5rem; /* top,bottom left,right */
+   font-size: 1rem;
+   font-weight: 400;
+   width: 100%;
 }
 
 .important {
@@ -111,8 +117,9 @@ ul.job-desc {
 }
 
 .item {
-   padding-left: 1rem;
-   padding-right: 1rem;
+   padding-left: .75rem;
+   padding-right: .75rem;
+   font-size: .9rem;
 }
 
 #resume {
@@ -126,7 +133,7 @@ ul.job-desc {
 }
 
 .contact-info {
-   margin-bottom: .5rem;
+   margin-bottom: 0rem;
    height:2rem;
 }
 
@@ -136,7 +143,7 @@ ul.job-desc {
 }
 
 #name {
-   font-size: 4em;
+   font-size: 2rem;
    font-weight:100;
    margin-bottom: 0;
 
@@ -156,10 +163,10 @@ ul.job-desc {
 }
 
 a {
-color: black;
-/* border-bottom: 2px dotted #000;
-text-decoration: none; */
-text-decoration-style: wavy;
+   color: black;
+   /* border-bottom: 2px dotted #000;
+   text-decoration: none; */
+   text-decoration-style: wavy;
 }
 
 /* Accommodate 1920 x 1080 devices... Allow for screen stretch */
@@ -170,29 +177,8 @@ text-decoration-style: wavy;
 }
 
 /* Accommodate slightly stretched MBP 1280 x 800 screens */
-@media screen and (max-width: 1360px) {
-   body {
-      font-size: 12px;
-   }
-
-   #resume {
-      width: 80%;
-   margin: 8rem auto 8rem auto; /* top&bottom, left&right */
-   }
-}
-
-/* Accommodate 800px wide screens */
-@media screen and (max-width: 800px) {
-   body {
-      font-size: 14px;
-   }
-
-   #resume {
-      width: 80%;
-      margin: 0rem auto 10rem auto; /* top&bottom, left&right */
-   }
-}
 
 .no-space {
    margin: 0;
+}
 }
