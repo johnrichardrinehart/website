@@ -80,7 +80,7 @@ ul.job-desc {
 }
 
 .to-center {
-   position:absolute;
+   position:relative;
    width:100%;
 /*   margin:0 auto; */
    text-align:center;
@@ -177,7 +177,7 @@ text-decoration-style: wavy;
 
    #resume {
       width: 80%;
-   margin: 8rem auto 8rem auto; /* top&bottom, left&right */
+   margin: 1rem auto 1rem auto; /* top&bottom, left&right */
    }
 }
 
