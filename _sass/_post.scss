@@ -27,6 +27,10 @@ figcaption {
    text-align: center;
 }
 
+pre {
+//   font-family: monospace;
+}
+
 #post-title a {
    color: inherit;
    text-decoration: none;
@@ -56,6 +60,13 @@ p {
 
 .emphasis-text {
    font-weight: 400;
+}
+
+// Highlight code
+.highlight > pre > * {
+   font-size: .65rem;
+   font-family: Roboto, Arial;
+   line-height: 1.2rem;
 }
 
 th {
@@ -129,7 +140,6 @@ hr {
    /* smartphones, iPhone, portrait 480x320 phones */
 
    #post-title a {
-      font-weight: 100;
       font-size: 1.7em;
    }
 
@@ -175,6 +185,11 @@ hr {
    th {
       font-size: 1em;
    }
+
+// Highlight code
+.highlight > pre > * {
+   font-size: .75rem;
+}
 }
 
 @media (min-width:575px) {
@@ -201,6 +216,12 @@ hr {
    th {
       font-size: 1em;
    }
+
+// Highlight code
+.highlight > pre > * {
+   line-height: 1.25rem;
+   font-size: 1rem;
+}
 }
 
 @media (min-width:669px) {
@@ -238,6 +259,12 @@ hr {
    th {
       font-size: 1em;
    }
+
+// Highlight code
+.highlight > pre > * {
+   line-height: 1.8rem;
+   font-size: 1.05rem;
+}
 }
 
 @media (min-width:801px) {
@@ -274,6 +301,11 @@ hr {
 
    th {
       font-size: 1em;
+   }
+
+   .highlight > pre > * {
+      line-height: 1.9rem;
+      font-size: 1.1rem;
    }
 }
 
@@ -332,6 +364,10 @@ hr {
 
    th {
       font-size: 1em;
+   }
+
+   .highlight > pre > * {
+      font-size: 1.25rem;
    }
 }
 
@@ -418,4 +454,11 @@ hr {
       font-size: 2em;
    }
 
+   .highlight > pre > code {
+      font-size: 1.25rem;
+   }
+
+   .highlight > pre > code  {
+      line-height: 2rem;
+   }
 }
