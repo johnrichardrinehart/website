@@ -1,11 +1,10 @@
 html, body{
    margin: 0;
    padding: 0;
-   // position: fixed;
-   //background-color:#ddd;
    border-radius: .5em;
    -webkit-font-smoothing: antialiased;
    font-family: Roboto, Arial;
+   margin-bottom: 2rem;
 }
 
 
@@ -23,6 +22,11 @@ a {
    color: inherit;
 }
 
+figcaption {
+   font-family: monospace;
+   text-align: center;
+}
+
 #post-title a {
    color: inherit;
    text-decoration: none;
@@ -31,10 +35,8 @@ a {
 
 #post-container {
    margin: auto;
-   //   padding: 2rem;
    padding: 2rem 2rem 0rem 2rem;
-   //   background-color: white;
-   height: 100%;
+   overflow-y: auto;
 }
 
 #post-title {
@@ -45,17 +47,10 @@ a {
 
 #post-content {
    line-height: 2em;
-   height: 100%;
-}
-
-.post-divider {
-   // border-top: solid;
-   // border-radius: 1em;
 }
 
 p {
    padding-bottom: 0rem;
-   //   margin-bottom: 0rem;
    margin-bottom: 1.5rem;
 }
 
