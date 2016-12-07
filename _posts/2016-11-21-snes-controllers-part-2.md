@@ -3,71 +3,197 @@ layout: post
 has_math: false
 ---
 
-<span class="emphasis-text"> Welcome, back, reader. </span> So far, I'm
-averaging a bit over 11 days between posts. That's not the greatest rate. But,
-let's not dwell on my failures. Let's talk about one of my recent struggles - or, as I like to
-think of them: unfinished successes :).
+<span class="emphasis-text"> Journeying on... </span> Before I conclude the
+previous post, I would like to note that today is December 7, 2016 and my most
+recent (2nd) post was made on October 28, 2016. This makes the average duration
+between posts much too long. I would like the average duration between posts to
+be less than 4 days (<.5 weeks). I have noticed that one of my favorite podcasts
+,"Stuff You Should Know", typically releases episodes every Tuesday and
+Thursday. That's been a frequent enough schedule that I, as a listener, have
+been able to maintain my excitement in checking for new episodes. So, I'll aim
+to release a blog post about every three days.  No matter what, now, I'll try to
+release a post every two to three days.
 
-I'm a product of the 90s. I'm also a product of small town, rural America. These
-two factors made Nintendo's SNES (TM) a core component of my childhood
-development. Zelda: A Link to the Past, Super Bomberman, Super Mario World,
-Donkey Kong Country and Super Mario Kart (and other games that I'm sure I'd
-remember if I saw them) collectively absorbed a large part of my youth. I'm sure
-that I've spent more than 300 hours playing all of those games (about an hour a
-day for a little under a year). That's almost two straight weeks. I guess it's
-really not that much time, but it definitely left a mark on me.
+Alright, let's finish the project for the SNES controllers. Okay, so last time I
+discussed the main issue with updating the emulator XML file: the controllers
+are indistinguishable. However, as noted before, the Linux kernel comes bundled
+with udev, a device manager. udev has the ability to perform any task upon
+device connection/disconnection. By including a text file inside of the
+udev/rules.d directory you can have a bash script run on connection or
+disconnection of any device. Thus, I have written the following rule (text
+file).
 
-To resurrect the spirit of my childhood and provide some entertainment for me
-and my friends I purchased 4 SNES USB controllers on eBay. They were only ~$5
-each with free shipping (allow 4-6 weeks for delivery). When these are paired up
-with an SNES emulator (snes9x, currently) the 8-bit magic really comes to life.
-The graphics, though, on a 60-inch flatscreen leave much to be desired. Rainbow
-Road is seizure-inducing and Bowser's Castle is disorienting.  Thankfully, the
-emulator comes with some low-pass filters that smooth out the graphics to dull
-the transitions in color.
+<figure>
+<figcaption>/etc/udev/rules.d/70-joystick-is-attached.rules</figcaption>
+{% highlight bash %}
+ACTION=="add", \
+ATTRS{idVendor}=="081f", \
+ATTRS{idProduct}=="e401", \
+RUN+="/home/john/joystick.sh"
+{% endhighlight %}
+</figure>
 
-Okay, but here's the rub: When the controllers are inserted the operating system
-(Ubuntu 16.04, currently) assigns device files to each "joystick" (js). For
-example, the first SNES controller inserted may be assigned /dev/input/js0, the
-second controller may be assigned /dev/input/js1, etc. Now, I have to tell
-snes9x, the emulator, which controller is associated with which "player" in the
-game. You do this before starting to play any game. So, one *could* insert the
-four controllers on some day, configure snes9x to associate /dev/input/js0 →
-joystick 4, /dev/input/js2 → joystick 1, /dev/input/js1 → joystick 2, and
-/dev/input/js3 → joystick 3, for example. If that person decided to never
-unplug the controllers then this should work forever. However, if tomorrow the
-person unplugs and re-plugs in the controllers in a different order then that
-person will have to reconfigure the joystick mapping in snes9x. That's a real
-pain.
+This rule runs the script joystick.sh whenever a USB device of the associated
+idVendor and idProduct are attached. That script looks like
 
-Now, if we could distinguish between the controllers at the time of insertion,
-then we maybe could use some joystick library or the operating system itself to
-configure the joysticks without having to use the interface of snes9x. However,
-all of the joysticks were made in China in the same factor. They have the same
-Vendor ID numbers and Product ID numbers (usually, the only numbers that
-distinguish USB devices). So, that isn't going to work.
+<figure>
+<figcaption>/home/john/joystick.sh</figcaption>
+{% highlight python %}
+#!/usr/bin/python
+from lxml import etree as ET
+import os, csv, datetime, usb.core
+# Particulars regarding the devices
+idVendor = 0x081f;
+idProduct = 0xe401;
+# Marked-up files locations
+SNES9X_CONFIGURATION_XML_FILE_PATH = \
+'/home/john/.snes9x/snes9x.xml';
+CONTROLLER_BINDINGS_CSV_FILE_PATH = \
+'/home/john/controller_bindings.csv';
+SNES9X_PREFERENCES_CSV_FILE_PATH = \
+'/home/john/snes9x_options.csv';
 
-However, I have noticed that snes9x (technically snes9x-gtk) configures an XML
-file in ~/.snes9x (~/.snes9x/snes9x.xml) with the information about the
-joysticks after a user clicks "apply" on the snes9x user interface after
-configuring the controller(s). The XML file stores information about which key
-to associate with "Up" on "Joystick 1" and "B" on "Joystick 2", etc. The
-information about these keypresses (stored as some number hashed from the
-keypress itself and the device number (js1, js0, etc.)) only depends on the
-order in which the joystick was installed. These numbers don't change with
-time and/or cycles of the joystick ("cycling" = "unplugging and plugging in the
-joystick"). So, I could just store these numbers and copy them, manually, into
-the XML file before launching the emulator. But, there is a better (more
-automated) way.
+# Use the above paths to turn them into proper file objects
+# Open CSV file to prepare to write into the
+#                                   XML configuration file
+controller_bindings_csv_file = \
+os.path.expanduser(CONTROLLER_BINDINGS_CSV_FILE_PATH);
+snes9x_configuration_xml_file = \
+os.path.expanduser(SNES9X_CONFIGURATION_XML_FILE_PATH);
+snes9x_preferences_csv_file = \
+os.path.expanduser(SNES9X_PREFERENCES_CSV_FILE_PATH);
 
-Introducing udev. udev is the device manager for the linux kernel. It's the guy
-that tells the operating system that devices (printers, mice, joysticks,
-webcams, etc.) have been attached to the computer. You can configure udev to
-trigger scripts to run when certain devices are plugged in. This is what I'm
-going to use udev for. I will detect when a controller has been plugged in and
-then I'll write to the XML file that stores the information about the joystick
-mapping. Then, no one has to worry about configuring snes9x with information
-about the joysticks. It's done on their behalf.
+# Figure out how many joysticks we have attached, here.
+controller_count = \
+len(list(usb.core.find(\
+idVendor=idVendor, idProduct=idProduct, find_all=True\
+)));
 
-It's getting late and I wanted to meet up some friends at a party (9 John). So,
-I'm going to take off, for now. Part 2 is coming!
+# Parse the snes9x XML file to prepare for customization
+# The remove_blank_text flag ensures that newlines are
+# pretty-handled properly
+parser = ET.XMLParser(remove_blank_text=True)
+tree = ET.parse(snes9x_configuration_xml_file, parser);
+# If it's the first device attached, then apply my preferences
+if controller_count == 1:
+ with open(snes9x_preferences_csv_file) as pref_file:
+  reader = csv.DictReader(pref_file);
+  for row in reader:
+   tree.find("//option[@name='"+row["name"]+"']").\
+   attrib["value"] = row["binding"]
+
+# shift controller_count by 1 for the XML file (starts at 0)
+controller_count -= 1;
+controllers_element = \
+tree.getroot().find('controllers');
+if ET.iselement(controllers_element):
+ controller_element = \
+ tree.getroot().find('controllers').attrib;
+else:
+ controllers_element = \
+ ET.SubElement(tree.getroot(),'controllers');
+
+# Parse the bindings file
+csvfile = open(controller_bindings_csv_file,'r');
+reader = csv.DictReader(csvfile);
+
+# loop through the CSV file, applying each binding successively
+for row in reader:
+ if row["joystick"] <= str(controller_count):
+  tree.find("//joypad[@number='"+\
+   row["joystick"]+"']/binding[@name='"+\
+   row["button"]+"']").attrib["binding"] = row["binding"];
+
+controller_count += 1;
+controllers_element.attrib["num_installed"] = \
+str(controller_count);
+
+tree.write(snes9x_configuration_xml_file, pretty_print=True);
+csvfile.close();
+
+with open("/home/john/joystick.log","a") as log:
+  log.write("Ran on " + datetime.datetime.utcnow().ctime() + "\n")
+{% endhighlight %}
+</figure>
+
+This script pulls in values from a CSV file that I generated by observing the
+emulator's XML file when the controllers were attached. The key point to making
+this all work is to realize that the controller parameters don't change with the
+particular controller that's installed or with time. So, all I have to do is
+observe the emulator configuration file's (XML file's) parameter when all of the
+controllers are plugged in, save these to some configuration file and then,
+whenever a controller is plugged in, write the attributes to the XML file. Now,
+the controllers don't need to stay plugged in according to maintain the
+button configuration and if a new controller is plugged in then its controller
+values are automatically written into the XML file according to "which"
+controller it is (if it's the 2nd controller plugged in then the controller
+values for the 2nd controller are written into the XML file). That controller
+then "becomes" the 2nd controller.
+
+Note that the script does not delete the entries for controllers as they're
+removed. That's an improvement that can be made. Then, the XML configuration
+file for Snes9x will only contain the configuration for joypads that are
+currently plugged in. The CSV that stores the relevant configuration parameters
+for these controllers is:
+
+<figure>
+<figcaption>/home/john/controller_bindings.csv</figcaption>
+{% highlight csv %}
+joystick,button,binding
+0,Up,556270082
+0,Down,556270083
+0,Left,556270080
+0,Right,556270081
+0,Start,553648137
+0,Select,553648136
+0,A,553648129
+0,B,553648130
+0,X,553648128
+0,Y,553648131
+0,L,553648132
+0,R,553648133
+1,Up,573047298
+1,Down,573047299
+1,Left,573047296
+1,Right,573047297
+1,Start,570425353
+1,Select,570425352
+1,A,570425345
+1,B,570425346
+1,X,570425344
+1,Y,570425347
+1,L,570425348
+1,R,570425349
+2,Up,589824514
+2,Down,589824515
+2,Left,589824512
+2,Right,589824513
+2,Start,587202569
+2,Select,587202568
+2,A,587202561
+2,B,587202562
+2,X,587202560
+2,Y,587202563
+2,L,587202564
+2,R,587202565
+3,Up,606601730
+3,Down,606601731
+3,Left,606601728
+3,Right,606601729
+3,Start,603979785
+3,Select,603979784
+3,A,603979777
+3,B,603979778
+3,X,603979776
+3,Y,603979779
+3,L,603979780
+3,R,603979781
+{% endhighlight %}
+</figure>
+I can also apply some general preferences to the emulator upon controller
+connection. Technically, this only needs to be done once. But, in this way, even if
+someone changed the configuration from something that I want, the configuration
+gets overwritten each time the controller is connected to the computer. However,
+I have no such file, yet. That is, /home/john/snes9x_options.csv
+
+That's it. I'll see you next time!
