@@ -2,6 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 Gemfile.lock
+jekyll_serve.bat
 
 # vim
 *.sw?
