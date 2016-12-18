@@ -1,5 +1,11 @@
 ---
 layout: post
+tags:
+ - design
+ - plotting
+ - plotlyjs
+ - data
+ - blogging
 ---
 
 <span class="emphasis-text"> Another thought</span>, another dollar - I wish.

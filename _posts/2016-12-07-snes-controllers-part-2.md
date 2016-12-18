@@ -1,6 +1,13 @@
 ---
 layout: post
 has_math: false
+tags:
+ - super nintendo
+ - snes
+ - scripting
+ - udev
+ - usb
+ - games
 ---
 
 <span class="emphasis-text"> Journeying on... </span> Before I conclude the

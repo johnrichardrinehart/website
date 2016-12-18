@@ -1,5 +1,9 @@
 ---
 layout: post
+tags:
+ - time
+ - management
+ - random
 ---
 
 <span class="emphasis-text"> Welcome, reader. </span> This has been a long time

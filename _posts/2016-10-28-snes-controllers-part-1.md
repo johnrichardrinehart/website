@@ -1,5 +1,12 @@
 ---
 layout: post
+tags:
+ - super nintendo
+ - snes
+ - scripting
+ - udev
+ - usb
+ - games
 ---
 
 <span class="emphasis-text"> Welcome, back, reader. </span> So far, I'm
