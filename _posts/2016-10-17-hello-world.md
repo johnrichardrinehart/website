@@ -69,14 +69,50 @@ deserve their own time. So, with only 11 hours left to do "productive" things
 let's compare how I would ideally spend my productive time with how I actually
 spend my productive time.
 
-| Category | Ideal Hours (%) | Actual Hours (%) | Deficit |
-|:-------------|:-------------|:-----|:------|
-| Research | 3.3 (30) | .44 (4) | 2.86 |
-| Physical fitness | 2.2 (20) | 2.2 (20) | 0 |
-| Socialization | 2.75 (25) | 1.65 (15) | 1.10 |
-| Long-term projects | 1.1 (10) | 3.3 (30) | -2.2 |
-| Short-term projects| 1.1 (10) | 3.3 (30) | -2.2 |
-| Self-exploration | .55 (5) | .11 (1) | .44 |
+<table>
+   <tr>
+      <th> Category </th>
+      <th> Ideal Hours (%) </th>
+      <th> Actual Hours (%) </th>
+      <th> Deficit </th>
+   </tr>
+   <tr>
+      <td>Research</td>
+      <td>3.3 (30)</td>
+      <td>.44 (4)</td>
+      <td>2.86 </td>
+   </tr>
+   <tr>
+      <td>Physical fitness</td>
+      <td>2.2 (20)</td>
+      <td>2.2 (20)</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>Socialization</td>
+      <td>2.75 (25)</td>
+      <td>1.65 (15)</td>
+      <td>1.10</td>
+   </tr>
+   <tr>
+      <td>Long-term projects</td>
+      <td>1.1 (10)</td>
+      <td>3.3 (30)</td>
+      <td>-2.2</td>
+   </tr>
+   <tr>
+      <td>Short-term projects</td>
+      <td>1.1 (10)</td>
+      <td>3.3 (30)</td>
+      <td>-2.2</td>
+   </tr>
+   <tr>
+      <td>Self-exploration</td>
+      <td>.55 (5)</td>
+      <td>.11 (1)</td>
+      <td>.44</td>
+   </tr>
+</table>
 
 Apparently, there's a serious deficiency in the amount of time that I spend
 researching and socializing. This time is originating from the time that I
