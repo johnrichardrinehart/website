@@ -21,12 +21,12 @@
       var viewport_height = window.innerHeight;
       var margin = {
          top: 20,
-         right: 30,
+         right: 40,
          bottom: 40,
-         left: 30 };
+         left: 40 };
 
       var timeline_nav_width = .8 * viewport_width;
-      var timeline_nav_height = .25 * viewport_height;
+      var timeline_nav_height = .145 * viewport_height;
 
       var x_axis_width = timeline_nav_width - margin.left - margin.right;
       var x_axis_height = timeline_nav_height - margin.top - margin.bottom;
@@ -58,13 +58,20 @@
          .call(x_axis);
 
 
-      g.selectAll("circle")
+      var post_links = g.selectAll("circle")
          .data(posts_metadata)
-         .enter().append("a").attr("href",function(d) {return d.url})
-         .append("circle")
+         .enter().append("a").attr("href",function(d) {return d.url});
+      post_links.append("line")
+         .attr("x1",function(d) {return x(Date.parse(d.date))})
+         .attr("x2",function(d) {return x(Date.parse(d.date))})
+         .attr("y1", "12px")
+         .attr("y2", x_axis_height)
+         .attr("stroke",function(d) { if (d !== undefined) { return getColorForPost(d.tags, 1)} })
+         .attr("stroke-width", "4px");
+      post_links.append("circle")
          .attr("r", "12px")
          .attr("cx", function(d) {return x(Date.parse(d.date))})
-         .attr("cy", "18px")
+         .attr("cy", "12px")
          .attr("fill", function(d) { if (d !== undefined) { return getColorForPost(d.tags, 1)} })
       d3.selectAll("a")
          .on("mouseover", function(d) {
