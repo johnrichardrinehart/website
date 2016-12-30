@@ -27,4 +27,4 @@ github_username:  fuzzybear3965
 markdown: kramdown
 #theme: minima
 #layout: default
-build: offline
+build: online
