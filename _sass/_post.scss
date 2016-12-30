@@ -138,7 +138,7 @@ ul {
    display: inline-block;
    border-radius: 5px;
    width: 200px;
-   max-height: 145vh;
+   max-height: 15vh;
    font-size: .9rem;
    line-height: 1.3rem;
    font-family: Roboto, Arial;
@@ -284,7 +284,7 @@ ul {
       0%,white 10%,white 90%,rgb(232,232,255) 100%); /* FF3.6-15 */
       background: -webkit-linear-gradient(left, rgb(232,232,255)
       0%,white 10%,white 90%,rgb(232,232,255) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to right, rgb(232,232,255)
+      background: linear-gradient(to ntright, rgb(232,232,255)
       0%,white 10%,white 90%,rgb(232,232,255) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#266464ff', endColorstr='#266464ff',GradientType=1 ); /* IE6-9 */
       font-size: 100%;
