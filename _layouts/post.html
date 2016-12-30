@@ -1,16 +1,18 @@
 <html>
-{% include head.html %}
-<body>
-
-{% include sidebar.html %}
-
-<div id="post-container">
-<div id="post-title">
-<h1> <a id="post-title" href="{{page.url}}">{{ page.title }}</a>  </h1>
-</div>
-
-<div id="post-content" class="post-divider">
-  {{ content }}
-</div>
-</div>
-</body>
+   {% include head.html %}
+   <body>
+      <div id="timeline-nav-container"></div>
+      {% include sidebar.html %}
+      <div id="post-container">
+         <div id="post-title">
+            <h1>
+               <a id="post-title" href="{{page.url}}">{{ page.title }}</a>
+            </h1>
+         </div>
+         <div id="post-content" class="post-divider">
+            {{ content }}
+         </div>
+      </div>
+   </body>
+   <script src="/js/timeline_nav.js"></script>
+</html>
