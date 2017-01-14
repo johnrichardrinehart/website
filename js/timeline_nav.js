@@ -16,7 +16,7 @@
    })
    // Set up nav-container and timeline-nav
    function drawTimelineNav( posts_metadata) {
-      var POSTTAGSCOLORS = {"random":"rgba(27,228,255,1)","games":"rgba(171,166,166,1)","design":"rgba(247,79,21,1)"};
+      var POSTTAGSCOLORS = {"random":"rgba(87,190,210,1)","games":"rgba(120,220,180,1)","design":"rgba(220,89,60,1)"};
       var viewport_width = window.innerWidth;
       var viewport_height = window.innerHeight;
       var margin = {
@@ -96,7 +96,7 @@
          if (tags !== undefined) {
             tag_which_has_color = tags.find( function(el, idx, arr) { return POSTTAGSCOLORS[el]; })
          }
-         return (tag_which_has_color === undefined) ? "rgb(0,0,0,.2)" : POSTTAGSCOLORS[tag_which_has_color].replace(/[\d\.](?=\)$)/g, opacity.toString());
+         return (tag_which_has_color === undefined) ? "rgba(140,140,140,1)" : POSTTAGSCOLORS[tag_which_has_color].replace(/[\d\.](?=\)$)/g, opacity.toString());
       }
    }
 
