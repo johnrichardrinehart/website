@@ -10,7 +10,7 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 {% if site.build == 'offline' %}
 <link href="/offline_assets/roboto_condensed.css" rel="stylesheet">
-{% elsif site.build == 'online' %}
+{% else if site.build == 'online' %}
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 {% endif %}
 <script>
@@ -29,7 +29,7 @@
 
 {% if site.build == 'offline' %}
 <link href="/offline_assets/material_icons.css" rel="stylesheet">
-{% elsif site.build == 'online' %}
+{% else if site.build == 'online' %}
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 rel="stylesheet">
 {% endif %}
@@ -43,7 +43,7 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" 
 
 {% if site.build == 'offline' %}
 <script type="text/javascript" src="/offline_assets/d3.min.js"></script>
-{% elsif site.build == 'online' %}
+{% else if site.build == 'online' %}
 <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
 {% endif %}
 {% endif %}
