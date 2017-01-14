@@ -32,8 +32,14 @@ hr {
 
 ol {
    list-style-type: decimal;
-   margin-bottom: 3rem;
+   margin-bottom: 2rem;
+   margin-left: 2rem;
    list-style-position: inside;
+   line-height: 1.75rem;
+}
+
+li {
+   margin-bottom: 1rem;
 }
 
 p {
