@@ -1,10 +1,9 @@
 (function () {
-   var navIsDisplayed = false;
    document.body.addEventListener("keydown", function(e) {
       if (e.code == 'Space') {
          e.preventDefault()
          var timeline_nav_container = document.getElementById("timeline-nav-container");
-         if (navIsDisplayed) {
+         if (timeline_nav_container.hasChildNodes()) {
             while (timeline_nav_container.hasChildNodes()) {
                timeline_nav_container.removeChild(timeline_nav_container.lastChild);
             }
@@ -12,7 +11,6 @@
          else {
             loadTimeLineNav()}
          }
-         navIsDisplayed = !navIsDisplayed;
    })
    // Set up nav-container and timeline-nav
    function drawTimelineNav( posts_metadata) {
