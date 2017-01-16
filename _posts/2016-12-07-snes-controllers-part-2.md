@@ -1,5 +1,6 @@
 ---
 layout: post
+title: SNES Controllers Part 2
 has_math: false
 tags:
  - super nintendo

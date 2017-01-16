@@ -1,5 +1,6 @@
 ---
 layout: post
+title: SNES Controllers Part 1
 tags:
  - super nintendo
  - snes
