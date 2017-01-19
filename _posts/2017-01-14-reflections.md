@@ -8,9 +8,9 @@ tags:
  - friendship
 ---
 
-<span class="emphasis-text"> So much for a post every three days </span>, or
+<span class="emphasis-text"> So much for a post every three days</span>, or
 whatever my goal was according to my second SNES controllers post. I've been a
-bit, recently, adapting to my new 2017 schedule and my new 2017 commitments. I'm
+bit absent, recently, adapting to my new 2017 schedule and my new 2017 commitments. I'm
 making it a priority to get to be earlier and wake up earlier. I usually roll
 with my roommate Alec for a couple hours in the morning (we've been training
 Gracie Brazilian jiu jitsu together since ~last May). I want to get done with
