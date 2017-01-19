@@ -30,11 +30,11 @@ blinking rate, a right vocabulary.
 Now, whether or not you accept this, you may be concerned regarding the import
 of my claims. How will you avoid decision paralysis? Well, like I said before,
 life is about balance. Despite our desires to do the most good in the world, we
-have to realize that many decisions will do both and good and most times it is
+have to realize that many decisions will do both good and bad and most times it is
 too difficult/unreasonable to determine the one that will do the most good. So,
 harking back to my earlier discourse, we have to have balance, even in this.
 How much can you consider the consequence of your actions and still do good
-while avoid becoming consumed by each step you take? The answer to this question
+while avoiding becoming consumed by each step you take? The answer to this question
 is incredibly personal and I don't claim to have an algorithm that you can
 follow to live the best life. That's a part of the human condition. That's what
 we're all trying to figure out together. But, I want to avoid the sentiment that
