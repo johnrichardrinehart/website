@@ -100,7 +100,7 @@ So, it's my belief that people don't commit evil acts because they believe they
 are evil acts. The crazy man does not believe that he is crazy. Instead, the
 evildoer believes his acts provide more good to himself (which he values more
 than the rest of the universe) than evil to the rest of the universe. The greedy
-man is trying to provide for either himself or his family. He believe he can be
+man is trying to provide for either himself or his family. He believes he can be
 greedy because everyone else continues to survive while he sucks the life out of
 the economy. If he knew he was killing his host by being greedy then he wouldn't
 do it.
