@@ -1,6 +1,6 @@
 @media print {
    @page {
-      margin: .25cm;
+      margin: 1cm;
    }
 
    p {
@@ -42,7 +42,7 @@
 
 .job-title, .school-affiliation{
    margin: 0;
-   margin-left: 2rem;
+   margin-left: 0rem;
    /*   margin-bottom: 1rem; */
    font-weight: 500;
    font-style: normal;
@@ -143,7 +143,7 @@ ul.job-desc {
 }
 
 #name {
-   font-size: 2rem;
+   font-size: 1.5rem;
    font-weight:100;
    margin-bottom: 0;
 
@@ -152,7 +152,7 @@ ul.job-desc {
 #name-border {
    margin: 0;
    padding: 0;
-   margin-bottom: 1rem;
+   margin-bottom: .5rem;
    margin-left: 2rem;
    margin-right: 2rem;
    position:relative;
