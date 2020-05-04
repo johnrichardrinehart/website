@@ -1,0 +1,218 @@
+html {
+   width: 80%;
+   margin-left: 10%;
+   background: #494f5c;
+   color: white;
+}
+
+p {
+   margin: .5rem 0rem;
+   /* top,bottom left,right */
+}
+
+.container {
+   clear: both;
+   font-family: 'Roboto', sans-serif;
+   /*   display: flex;
+   flex-flow: row nowrap;
+   */
+   width: 100%;
+}
+
+.child {
+   padding-bottom: .5rem;
+}
+
+.header {
+   font-size: 18px;
+}
+
+.space-between {
+   justify-content: flex-start;
+}
+
+.divider {
+   border-right: 2px solid #808080;
+   position: absolute;
+   height: 8rem;
+   right: 50%;
+   top: 1.5rem;
+}
+
+.clear-left-margin {
+   margin-left: 0;
+}
+
+.job-info {
+   margin-bottom: 1rem;
+}
+
+.job-title,
+.school-affiliation {
+   margin: 0;
+   margin-left: 2rem;
+   /*   margin-bottom: 1rem; */
+   font-weight: 600;
+   font-style: normal;
+   font-size: 11pt;
+}
+
+.school-affiliation {
+   font-style: italic;
+   font-weight: normal;
+}
+
+.job-timespan {
+   margin: 0;
+   margin-right: 2rem;
+   font-size: 11pt;
+}
+
+.job-desc {
+   margin: 0;
+   margin-left: 2rem;
+   margin-bottom: .5rem;
+   font-size: 1em;
+   width: 70%;
+}
+
+ul.job-desc {
+   margin-bottom: 2rem;
+}
+
+.to-right {
+   float: right;
+   width: 200px;
+   text-align: right
+}
+
+.to-left {
+   float: left;
+   width: 400px;
+   text-align: left;
+}
+
+.to-center {
+   position: relative;
+   width: 100%;
+   /*   margin:0 auto; */
+   text-align: center;
+   /*   display:inline-block; */
+}
+
+.heading {
+   margin: 1rem .5rem;
+   /* top,bottom left,right */
+   font-size: 2em;
+   font-weight: 300;
+}
+
+.important {
+   font-weight: 500;
+   font-size: 1em;
+}
+
+.some-space {
+   padding: 1rem 4rem;
+   /* top,bottom left,right */
+}
+
+.some-space-top {
+   padding-top: 2rem;
+   /* top, right, bottom, left */
+}
+
+.some-space-right {
+   padding-right: 1rem;
+   /* top, right, bottom, left */
+}
+
+.item {
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+#resume {
+   margin: 8rem auto 8rem auto;
+   /* top&bottom, left&right */
+   width: 75%;
+   top: 6rem;
+   border-style: solid;
+   border-width: 3px;
+   border-color: #F0F0F0;
+   border-radius: 20px;
+}
+
+.contact-info {
+   margin-bottom: .5rem;
+   height: 2rem;
+}
+
+.yield-height {
+   height: auto;
+   position: relative;
+}
+
+#name {
+   font-size: 4em;
+   font-weight: 100;
+   margin-bottom: 0;
+
+}
+
+#name-border {
+   margin: 0;
+   padding: 0;
+   margin-bottom: 1rem;
+   margin-left: 2rem;
+   margin-right: 2rem;
+   position: relative;
+   border-bottom-style: solid;
+   border-color: #999;
+   border-bottom-width: 4px;
+   height: 4px;
+}
+
+a {
+   color: black;
+   /* border-bottom: 2px dotted #000;
+text-decoration: none; */
+   text-decoration-style: wavy;
+}
+
+/* Accommodate 1920 x 1080 devices... Allow for screen stretch */
+@media screen and (max-width: 2000px) {
+   body {
+      font-size: 16px;
+   }
+}
+
+/* Accommodate slightly stretched MBP 1280 x 800 screens */
+@media screen and (max-width: 1360px) {
+   body {
+      font-size: 12px;
+   }
+
+   #resume {
+      width: 80%;
+      margin: 1rem auto 1rem auto;
+      /* top&bottom, left&right */
+   }
+}
+
+/* Accommodate 800px wide screens */
+@media screen and (max-width: 800px) {
+   body {
+      font-size: 14px;
+   }
+
+   #resume {
+      width: 80%;
+      margin: 0rem auto 10rem auto;
+      /* top&bottom, left&right */
+   }
+}
+
+.no-space {
+   margin: 0;
+}

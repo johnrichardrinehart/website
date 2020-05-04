@@ -1,0 +1,6 @@
+[submodule "hugo/themes/hermit"]
+	path = hugo/themes/hermit
+	url = https://github.com/Track3/hermit.git
+[submodule "hugo/themes/ansemjo-hackcss"]
+	path = hugo/themes/ansemjo-hackcss
+	url = https://github.com/ansemjo/hugo-theme-hackcss
