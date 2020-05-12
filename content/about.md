@@ -8,5 +8,5 @@ Fundamentally, and simply, I'm a student of every situation in which I find myse
 If you're curious about my experience or my credentials then you have a few options:
 
 1. [Resume](/resume)
-2. Contact me ([go back](/))
-3. [Read my thoughts](/posts/)
+1. [Read my thoughts](/posts/)
+1. Contact me (see footer)

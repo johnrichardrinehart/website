@@ -1,7 +1,6 @@
 ---
 title: "Hello World"
 date: 2020-05-03T16:47:51-07:00
-draft: true
 toc: false
 images:
 tags:
