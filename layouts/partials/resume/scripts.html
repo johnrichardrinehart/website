@@ -1,0 +1,10 @@
+<!-- Javascript -->
+<script type="text/javascript" src="{{.Site.BaseURL}}plugins/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{{.Site.BaseURL}}plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- custom js -->
+<script type="text/javascript" src="{{.Site.BaseURL}}js/main.js"></script>
+
+{{ if .Site.Params.Analytics }}
+  {{ partial "resume/analytics.html" . }}
+{{ end }}

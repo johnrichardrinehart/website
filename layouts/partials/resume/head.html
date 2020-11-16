@@ -1,0 +1,28 @@
+<head>
+  <title>{{ .Site.Title }}</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  {{ if $.Site.Params.Chrome_mobile_color }}
+  <meta name="theme-color" content="{{ $.Site.Params.Chrome_mobile_color }}">
+  {{ end }}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ $.Site.Params.Description }}">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}plugins/bootstrap/css/bootstrap.min.css">
+
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}plugins/font-awesome/css/all.css">
+
+  {{ $sass := resources.Get "css/main.scss" }}
+  {{ $style := $sass | resources.ExecuteAsTemplate $sass . | resources.ToCSS }}
+
+
+  <!-- Theme CSS -->
+  <link id="theme-style" rel="stylesheet" href="{{ $style.Permalink }}">
+</head>

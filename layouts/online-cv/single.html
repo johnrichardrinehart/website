@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{{ partial "resume/head.html" . }}
+
+<body>
+  <div class="wrapper">
+    {{ partial "resume/sidebar.html" . }}
+
+    <div class="main-wrapper">
+      {{ partial "resume/career-profile.html" . }}
+
+      {{ if .Site.Data.resume.sidebar.education }}
+        {{ partial "resume/education.html" . }}
+      {{ end }}
+      
+      {{ partial "resume/experiences.html" . }}
+      
+      {{ partial "resume/projects.html" . }}
+      
+      {{ partial "resume/publications.html" . }}
+      
+      {{ partial "resume/skills.html" . }}
+      
+    </div>
+  </div>
+
+  {{ partial "resume/footer.html" . }}
+
+{{ partial "resume/scripts.html" . }}
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{{ with .Params.publications }}
+<section class="section publications-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ .Params.publications.title }}
+  </h2>
+
+  {{ with .Params.publications.intro }}
+  <div class="intro">
+    {{ .Params.publications.intro | markdownify }}
+  </div><!--//intro-->
+  {{ end }}
+
+  {{ range $publication := .Params.publications.papers }}
+  <div class="item">
+    {{ if $publication.link }}
+      <li><a href="{{ $publication.link }}">{{ $publication.title }}</a></li>
+    {{ else }}
+      <li>{{ $publication.title }}</li>
+    {{ end }}
+    <div class="publication-authors">{{ $publication.authors }}</div>
+    <div class="publication-conference">{{ $publication.conference }}</div>
+  </div><!--//item-->
+  {{ end }}
+
+</section><!--//section-->
+{{ end }}

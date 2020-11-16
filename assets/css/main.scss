@@ -1,0 +1,4 @@
+@charset "utf-8";
+
+@import "skins/{{ .Site.Params.Theme_skin }}"; // skin
+@import "default"; // main partials

@@ -10,3 +10,4 @@ If you're curious about my experience or my credentials then you have a few opti
 1. [Resume](/resume)
 1. [Read my thoughts](/posts/)
 1. Contact me (see footer)
+1. [Online CV](/online-cv)

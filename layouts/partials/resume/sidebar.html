@@ -1,0 +1,34 @@
+{{ $sidebar := .Site.Data.resume.sidebar }}
+<div class="sidebar-wrapper">
+
+  <div class="profile-container">
+
+    {{ if $sidebar.name }}
+    <img class="avatar" src="{{ .Site.BaseURL }}/images/{{ $sidebar.avatar }}" alt="profile picture" />
+    {{ end }}
+
+    {{ if $sidebar.name }}
+    <h1 class="name">{{ $sidebar.name }}</h1>
+    {{ end }}
+
+    {{ if $sidebar.tagline }}
+    <h3 class="tagline">{{ $sidebar.tagline }}</h3>
+    {{ end }}
+
+  </div><!--//profile-container-->
+
+  {{ partial "resume/contact.html" . }}
+
+  {{ if $sidebar.education }}
+    {{ partial "resume/education.html" . }}
+  {{ end }}
+
+  {{ partial "resume/language.html" . }}
+  
+  {{ partial "resume/interests.html" . }}
+
+  <!-- {{ if $sidebar.about }}
+    {{ partial "resume/about.html" . }}
+  {{ end }} -->
+
+</div><!--//sidebar-wrapper-->

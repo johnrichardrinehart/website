@@ -1,0 +1,21 @@
+{{ with .Params.interests }}
+<div class="interests-container container-block">
+
+  <h2 class="container-block-title">
+    Interests
+  </h2>
+
+  <ul class="list-unstyled interests-list">
+    {{ range $interest := .Params.interests }}
+
+      {{ if $interest.link }}
+      <li><a href="{{ $interest.link }}">{{ $interest.item }}</a></li>
+      {{ else }}
+      <li>{{ $interest.item }}</li>
+      {{ end }}
+
+    {{ end }}
+  </ul>
+
+</div><!--//interests-->
+{{ end }}

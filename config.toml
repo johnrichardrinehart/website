@@ -56,6 +56,18 @@ unsafe = true
   # Add custom css
   # customCSS = ["css/foo.css", "css/bar.css"]
 
+  chrome_mobile_color = "" # use hex colors (ex =#1976d2) or leave empty if you don't want a color for chrome mobile searchbar
+  # Tracker
+  #  analytics = "UA-83979019-1"
+  description = "A beautiful Jekyll theme for creating resume"
+  theme_skin = "ceramic" # blue turquoise green berry orange ceramic
+
+  # Build settings
+  compress-site = "yes"
+
+  encoding = "utf-8"
+  compress_html_clippings = "all"
+
   # Social Icons
   # Check https://github.com/Track3/hermit#social-icons for more info.
   [[params.social]]
