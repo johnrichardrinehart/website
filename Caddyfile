@@ -1,0 +1,4 @@
+johnrinehart.dev, www.johnrinehart.dev {
+   root * /home/johnrichardrinehart/repos/website/public
+   file_server
+}
