@@ -9,24 +9,37 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         buildInputs = [ pkgs.hugo ];
+        hugoBuild = env: pkgs.stdenv.mkDerivation {
+          inherit buildInputs;
+
+          name = "website";
+          version = "1.0.0";
+          src = ./.;
+          buildPhase = ''
+              hugo --environment ${env}
+          '';
+          installPhase = ''
+              cp -r ./public $out/;
+          '';
+        };
       in
       rec {
-        packages = {
-          hugo-build = pkgs.stdenv.mkDerivation {
-            inherit buildInputs;
+        packages = rec {
+          dev = hugoBuild "dev";
+          prod = hugoBuild "prod";
 
-            name = "website";
-            version = "1.0.0";
-            src = ./.;
-            buildPhase = ''
-              hugo
-            '';
-            installPhase = ''
-              cp -r $PWD/public $out/;
-            '';
-          };
+          default = dev;
         };
-        defaultPackage = packages.hugo-build;
+
+        apps = rec {
+          server = {
+            program = "${pkgs.caddy}/bin/caddy";
+            type = "app";
+          };
+
+          default = server;
+        };
+
 
         devShell = pkgs.mkShell {
           buildInputs = [ pkgs.hugo ];
